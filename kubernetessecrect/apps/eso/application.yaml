@@ -14,8 +14,8 @@ spec:
       targetRevision: 0.9.6
       helm:
         releaseName: eso
-    - repoURL: ""
-      path: apps/eso/apps/resources 
+    - repoURL: "https://github.com/XvAbrahamvX/argoprojects/tree/main/kubernetessecrect/"
+      path: apps/eso/resources 
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
