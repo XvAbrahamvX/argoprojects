@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eso
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: "https://kubernetes.default.svc"
+  project: default
+  sources:
+    - chart: external-secrets
+      repoURL: "https://charts.external-secrets.io/"
+      targetRevision: 0.9.6
+      helm:
+        releaseName: eso
+    - repoURL: ""
+      path: apps/eso/apps/resources 
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
