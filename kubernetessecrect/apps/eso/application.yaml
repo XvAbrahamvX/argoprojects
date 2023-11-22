@@ -2,10 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: eso
-  namespace: argocd
+  namespace: eso
 spec:
   destination:
-    namespace: argocd
+    namespace: eso
     server: "https://kubernetes.default.svc"
   project: default
   sources:
