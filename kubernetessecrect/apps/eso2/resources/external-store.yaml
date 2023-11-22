@@ -1,0 +1,21 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: example2
+  namespace: eso2
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: SecretStore
+    name: eso-secret2             # name of the SecretStore (or kind specified)
+  target:
+    name: eso-external-secrets-webhook # name of the k8s Secret to be created
+  dataFrom:
+  - find:
+      name:
+        # match secret name with regexp
+        regexp: "tls-.*"
+  - find:
+      tags:
+        # fetch secrets based on label combination
+        app: "nginx"
