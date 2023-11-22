@@ -13,5 +13,5 @@ spec:
   data:
   - secretKey: extra
     remoteRef:
-      key: secrets
+      key: secret
       property: extra
