@@ -8,9 +8,9 @@ spec:
     kind: SecretStore
     name: secrets               # name of the SecretStore (or kind specified)
   target:
-    name: secret-to-be-created  # name of the k8s Secret to be created
+    name: example1  # name of the k8s Secret to be created
   data:
   - secretKey: extra
     remoteRef:
-      key: secret-example
+      key: example1
       property: extra
