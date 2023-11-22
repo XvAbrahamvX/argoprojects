@@ -9,9 +9,9 @@ spec:
     kind: SecretStore
     name: eso-secret              # name of the SecretStore (or kind specified)
   target:
-    name: argocd-secret # name of the k8s Secret to be created
+    name: eso-external-secrets-webhook # name of the k8s Secret to be created
   data:
-  - secretKey: 3PbVHhMgE4bmMQRf57k8GaoNYXb+scow307VuhmWl+g=
+  - secretKey: eso-external-secrets-webhook
     remoteRef:
-      key: 3PbVHhMgE4bmMQRf57k8GaoNYXb+scow307VuhmWl+g=
+      key: data
       property: tls.crt
