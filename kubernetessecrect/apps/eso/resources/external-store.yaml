@@ -1,0 +1,17 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: example1
+  namespace: argocd
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: SecretStore
+    name: secrets               # name of the SecretStore (or kind specified)
+  target:
+    name: secret-to-be-created  # name of the k8s Secret to be created
+  data:
+  - secretKey: extra
+    remoteRef:
+      key: secret-example
+      property: extra
