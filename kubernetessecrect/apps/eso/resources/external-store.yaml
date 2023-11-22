@@ -10,8 +10,12 @@ spec:
     name: eso-secret              # name of the SecretStore (or kind specified)
   target:
     name: eso-external-secrets-webhook # name of the k8s Secret to be created
-  data:
-  - secretKey: eso-external-secrets-webhook
-    remoteRef:
-      key: data
-      property: tls.crt
+  dataFrom:
+  - find:
+      name:
+        # match secret name with regexp
+        regexp: "tls-.*"
+  - find:
+      tags:
+        # fetch secrets based on label combination
+        app: "nginx"
