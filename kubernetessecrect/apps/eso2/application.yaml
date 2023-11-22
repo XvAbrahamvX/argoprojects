@@ -24,5 +24,5 @@ spec:
         # - name: "rbca.servicebindings.create"
         #   value: "false"
     - repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
-      path: kubernetessecrect/apps/eso/resources 
+      path: kubernetessecrect/apps/eso2/resources 
       targetRevision: main
