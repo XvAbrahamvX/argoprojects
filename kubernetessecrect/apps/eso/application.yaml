@@ -14,6 +14,6 @@ spec:
       targetRevision: 0.9.6
       helm:
         releaseName: eso
-    # - repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
-    #   path: /kubernetessecrect/apps/eso/resources 
-      # targetRevision: main
+    - repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
+      path: kubernetessecrect/apps/eso/resources 
+      targetRevision: main

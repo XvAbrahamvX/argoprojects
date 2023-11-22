@@ -14,15 +14,15 @@ spec:
       targetRevision: 0.9.6
       helm:
         releaseName: fake
-        parameters:
-        - name: "webhook.create"
-          value: "false"
-        - name: "certController.rbac.create"
-          value: "false"
-        - name: "rbca.create"
-          value: "false"
-        - name: "rbca.servicebindings.create"
-          value: "false"
+        # parameters:
+        # - name: "webhook.create"
+        #   value: "false"
+        # - name: "certController.rbac.create"
+        #   value: "false"
+        # - name: "rbca.create"
+        #   value: "false"
+        # - name: "rbca.servicebindings.create"
+        #   value: "false"
     - repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
-      path: /kubernetessecrect/apps/eso/resources 
+      path: kubernetessecrect/apps/fake/resources 
       targetRevision: main
