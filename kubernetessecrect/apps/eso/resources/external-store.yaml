@@ -7,9 +7,9 @@ spec:
   refreshInterval: 1h
   secretStoreRef:
     kind: SecretStore
-    name: secrets               # name of the SecretStore (or kind specified)
+    name: secret              # name of the SecretStore (or kind specified)
   target:
-    name: secrets  # name of the k8s Secret to be created
+    name: secret  # name of the k8s Secret to be created
   data:
   - secretKey: extra
     remoteRef:
