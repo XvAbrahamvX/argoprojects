@@ -14,6 +14,10 @@ spec:
       targetRevision: 0.9.6
       helm:
         releaseName: eso
+        valueFiles:
+        - $kubernetessecrets/app/eso/values.yaml
+    - ref: kubernetessecrets
+      repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
     - repoURL: "https://github.com/XvAbrahamvX/argoprojects.git"
       path: kubernetessecrect/apps/eso/resources 
       targetRevision: main
