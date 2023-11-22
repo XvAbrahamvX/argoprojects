@@ -7,11 +7,11 @@ spec:
   refreshInterval: 1h
   secretStoreRef:
     kind: SecretStore
-    name: secret              # name of the SecretStore (or kind specified)
+    name: eso-secret              # name of the SecretStore (or kind specified)
   target:
-    name: secret  # name of the k8s Secret to be created
+    name: argocd-secret # name of the k8s Secret to be created
   data:
-  - secretKey: extra
+  - secretKey: 3PbVHhMgE4bmMQRf57k8GaoNYXb+scow307VuhmWl+g=
     remoteRef:
-      key: secret
-      property: extra
+      key: 3PbVHhMgE4bmMQRf57k8GaoNYXb+scow307VuhmWl+g=
+      property: tls.crt
